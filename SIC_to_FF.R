@@ -17,7 +17,7 @@ SIC_to_FF<- function(FF_number = 48){
            ind_short = str_trim(str_extract(ind, '[A-z]+\\s')), ind_desp = str_trim(str_remove(ind, '[A-z]+\\s'))) %>%
     select(-ind) %>%
     filter(str_detect(SIC, '\\d{4}-\\d{4}') |((ind_short=='Other') & (sum(ind_short=='Other') ==1))) %>%
-    mutate(SIC_codes = str_extract(SIC, '\\d{4}-\\d{4}'), SIC_detail = str_trim(str_extract(SIC, '\\s[A-z]+.*'))) %>%
+    mutate(SIC_codes = str_extract(SIC, '\\d{4}-\\d{4}'), SIC_desp = str_trim(str_extract(SIC, '\\s[A-z]+.*'))) %>%
     separate(SIC_codes, into = c('SIC_start', 'SIC_end'), sep = '-') %>%
     mutate(SIC_start = as.integer(SIC_start), SIC_end = as.integer(SIC_end)) %>%
     select(-SIC)
