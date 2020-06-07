@@ -1,5 +1,5 @@
-# Converting SIC codes into FF industries
-The helper function `all_FF_numbers()` prints all valid industry classfifications (5, 10, 12, 17, 30, 38, 48, 49).
+# Converting SIC codes into Fama-French industries
+The helper function `all_FF_numbers()` prints all valid Fama-French industry classfifications: 5, 10, 12, 17, 30, 38, 48, 49.
 
 
 The main function `SIC_to_FF(FF_number)` generates a dataframe mapping sic codes to Fama-French industries. For example, `SIC_to_FF(48)` produces a dataframe like this:
