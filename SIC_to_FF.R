@@ -1,6 +1,6 @@
 library(tidyverse)
 
-all_FF_number <- function(){
+all_FF_numbers <- function(){
   # helper function to print all FF industries
   print(c(5, 10, 12, 17, 30, 38, 48, 49))
 }
