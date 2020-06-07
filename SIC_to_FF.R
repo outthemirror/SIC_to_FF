@@ -25,4 +25,3 @@ SIC_to_FF<- function(FF_number = 48){
   file.remove(c('FF.zip' ), dir(pattern = 'Siccodes\\d{1,2}.txt'))
   return(res)
 }
-SIC_to_FF(48)
